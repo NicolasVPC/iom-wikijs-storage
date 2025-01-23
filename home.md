@@ -2,7 +2,7 @@
 title: Homepage
 description: The homepage of the wiki
 published: true
-date: 2025-01-23T18:49:22.609Z
+date: 2025-01-23T18:49:24.417Z
 tags: home
 editor: markdown
 dateCreated: 2025-01-22T21:41:20.166Z
