@@ -2,10 +2,10 @@
 title: Notes
 description: 
 published: true
-date: 2025-01-22T21:49:37.070Z
+date: 2025-01-23T19:05:32.395Z
 tags: notes
 editor: markdown
-dateCreated: 2025-01-22T21:49:35.207Z
+dateCreated: 2025-01-23T19:05:30.438Z
 ---
 
 # iliad technical test
