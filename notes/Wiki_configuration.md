@@ -2,10 +2,10 @@
 title: Wiki.js configuration
 description: 
 published: true
-date: 2025-01-23T22:58:04.688Z
-tags: notes, wikijs, config
+date: 2025-01-24T09:24:57.977Z
+tags: config, notes, wikijs
 editor: markdown
-dateCreated: 2025-01-23T20:04:42.097Z
+dateCreated: 2025-01-24T08:40:28.849Z
 ---
 
 # Introduction
@@ -30,7 +30,7 @@ The db will listen to the port `8085` through the local network. We won't obviou
 
 The db storage is mounted in a local volume which is shared with the container, making it easier for us to work on operations like backups... *it is not necessary to mount a local volume, we could anyways integrate the backup system in other ways.* It is anyways useful in a development environment.
 
-> **Note:** The `MYSQL_USER` env variable will be used in the wiki.js configuration to access the db as well as `MYSQL_PASSWORD`.
+> **Note:** The `MYSQL_USER` env variable will be used in the wiki.js configuration to access the db as well as `MYSQL_PASSWORD` and `MYSQL_DATABASE`.
 {.is-info}
 
 ### adminer
@@ -41,6 +41,10 @@ It will listen on the port `8083`.
 `Wiki.js` is an open source wiki software: https://js.wiki/
 It will be used to write the documentation, guides included.
 The `wiki.js` will listens on the port `8084`.
+
+> **Note:** the 
+{.is-info}
+
 
 ``` yaml
 services:
