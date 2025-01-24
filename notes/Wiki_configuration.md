@@ -2,7 +2,7 @@
 title: Wiki.js configuration
 description: 
 published: true
-date: 2025-01-24T11:04:10.263Z
+date: 2025-01-24T11:04:34.824Z
 tags: config, notes, wikijs
 editor: markdown
 dateCreated: 2025-01-24T08:40:28.849Z
@@ -20,7 +20,7 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJiYWNrZ3JvdW5kOiB0
 
 # Setup
 ## database
-The database is a `mariadb` database-. 
+The database is a `mariadb` database.
 Here the docker image of `mariadb 11.4`: https://hub.docker.com/layers/library/mariadb/11.4/images/sha256-301f8065fc5f7e72288f146d0098d0f27c9c84fcbd5cb9f4f2fb5de46c9cc1dd
 The version `11.4` has been chosen because it's the current (today: 23/01/2024) LTS version: https://endoflife.date/mariadb (end of support: 29 May 2029)
 
