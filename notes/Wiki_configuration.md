@@ -2,7 +2,7 @@
 title: Wiki.js configuration
 description: 
 published: true
-date: 2025-01-24T09:24:57.977Z
+date: 2025-01-24T09:26:37.304Z
 tags: config, notes, wikijs
 editor: markdown
 dateCreated: 2025-01-24T08:40:28.849Z
@@ -42,7 +42,7 @@ It will listen on the port `8083`.
 It will be used to write the documentation, guides included.
 The `wiki.js` will listens on the port `8084`.
 
-> **Note:** the 
+> **Note:** The `DB_USER`, `DB_PASS` and `DB_NAME` env variable must have respectively the same value of `MYSQL_USER`, `MYSQL_PASSWORD` and `MYSQL_DATABASE`.
 {.is-info}
 
 
