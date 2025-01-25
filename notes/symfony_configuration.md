@@ -2,7 +2,7 @@
 title: Symfony configuration
 description: 
 published: true
-date: 2025-01-25T10:40:16.143Z
+date: 2025-01-25T14:12:50.918Z
 tags: config, docker, notes, symfony
 editor: markdown
 dateCreated: 2025-01-24T18:37:41.173Z
@@ -100,3 +100,6 @@ Start the project!
     docker compose up -d
 
 Browse `https://localhost`, your Docker configuration is ready!
+
+This page means everything is working correctly:
+![default-symfony7-homepage.png](/notes/default-symfony7-homepage.png)
