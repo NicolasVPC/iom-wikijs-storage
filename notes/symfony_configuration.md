@@ -2,7 +2,7 @@
 title: Symfony configuration
 description: 
 published: true
-date: 2025-01-25T10:35:43.381Z
+date: 2025-01-25T10:40:16.143Z
 tags: config, docker, notes, symfony
 editor: markdown
 dateCreated: 2025-01-24T18:37:41.173Z
@@ -58,5 +58,45 @@ symfony new my_project_directory --version="7.2.x" --webapp
 symfony new my_project_directory --version="7.2.x"
 ```
 
-In this case Iliad Order Manager is an API, so: `symfony new my_project_directory --version="7.2.2"`
+In this case Iliad Order Manager is an API, so: `symfony new api --version="7.2.2"`
 version `7.2` end of support: July 2025 (https://symfony.com/releases/7.2)
+
+running `cd api` then `symfony server:start` will run the server, and it will shou up the symfony default homepage.
+
+## dockerize the project
+It's also possible to use Symfony Docker with existing projects!
+
+First, [download this skeleton](https://github.com/dunglas/symfony-docker).
+
+If you cloned the Git repository, be sure to not copy the `.git` directory to prevent conflicts with the `.git` directory already in your existing project.
+You can copy the contents of the repository using git and tar. This will not contain `.git` or any uncommited changes.
+
+    git archive --format=tar HEAD | tar -xC my-existing-project/
+
+If you downloaded the skeleton as a zip you can just copy the extracted files:
+
+    cp -Rp symfony-docker/. my-existing-project/
+
+Enable the Docker support of Symfony Flex:
+
+    composer config --json extra.symfony.docker 'true'
+
+Re-execute the recipes to update the Docker-related files according to the packages you use
+
+    rm symfony.lock
+    composer recipes:install --force --verbose
+
+Double-check the changes, revert the changes that you don't want to keep:
+
+    git diff
+    ...
+
+Build the Docker images:
+
+    docker compose build --no-cache --pull
+
+Start the project!
+
+    docker compose up -d
+
+Browse `https://localhost`, your Docker configuration is ready!
