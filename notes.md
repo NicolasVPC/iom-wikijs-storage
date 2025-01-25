@@ -2,7 +2,7 @@
 title: Notes
 description: 
 published: true
-date: 2025-01-25T08:10:47.191Z
+date: 2025-01-25T08:12:12.784Z
 tags: notes
 editor: markdown
 dateCreated: 2025-01-22T21:49:35.207Z
@@ -48,8 +48,6 @@ The aim of this test is not only to assess your technical skills but also to giv
 
 Good luck and do your best! *(thanks)*
 
-> [features](/notes/features)
-{.is-info}
-
+[features](/notes/features)
 [symfony_configuration](/notes/symfony_configuration)
 [Wiki_configuration](/notes/Wiki_configuration)
