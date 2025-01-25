@@ -2,7 +2,7 @@
 title: Symfony configuration
 description: 
 published: true
-date: 2025-01-25T00:19:17.003Z
+date: 2025-01-25T00:20:19.874Z
 tags: config, docker, notes, symfony
 editor: markdown
 dateCreated: 2025-01-24T18:37:41.173Z
@@ -48,5 +48,7 @@ Install PDO drivers (mandatory for `Doctrine`).
  
 `sudo apt install php-mbstring php-intl php8.3-mysql`
 
+appunti
 /app/public/index.php
+all'interno del container che viene creato in /app c'è il codice sorgente, sembra esserci l'associazione del volume ./:/app
 
