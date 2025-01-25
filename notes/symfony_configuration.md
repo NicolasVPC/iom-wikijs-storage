@@ -2,7 +2,7 @@
 title: Symfony configuration
 description: 
 published: true
-date: 2025-01-24T22:45:16.447Z
+date: 2025-01-25T00:19:17.003Z
 tags: config, docker, notes, symfony
 editor: markdown
 dateCreated: 2025-01-24T18:37:41.173Z
@@ -20,8 +20,8 @@ Installing the [Symfony CLI](https://symfony.com/download) and running `symfony 
 **no PHP binaries detected**
 if the output is `no PHP binaries detected`, it means that you don't have php installed on the system, running `sudo apt install php-common libapache2-mod-php php-cli` will fix this issue.
 
-****
-
+**simplexml_import_dom() must be available**
+this error means you must install SimpleXML extension.
 ``` bash                   
  [ERROR]                                          
  Your system is not ready to run Symfony projects 
@@ -33,3 +33,20 @@ Fix the following mandatory requirements
  * simplexml_import_dom() must be available
    > Install and enable the SimpleXML extension.
 ```
+
+Running: `sudo apt install php-xml` will fix the issue.
+
+**Optional recommendations to improve your setup**
+mb_strlen() should be available
+Install and enable the mbstring extension.
+
+intl extension should be available
+Install and enable the intl extension (used for validators).
+
+PDO should have some drivers installed (currently available: none)
+Install PDO drivers (mandatory for `Doctrine`).
+ 
+`sudo apt install php-mbstring php-intl php8.3-mysql`
+
+/app/public/index.php
+
