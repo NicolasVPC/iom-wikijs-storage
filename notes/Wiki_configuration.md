@@ -2,7 +2,7 @@
 title: Wiki.js configuration
 description: 
 published: true
-date: 2025-01-24T11:04:34.824Z
+date: 2025-01-25T08:26:29.368Z
 tags: config, notes, wikijs
 editor: markdown
 dateCreated: 2025-01-24T08:40:28.849Z
@@ -34,6 +34,9 @@ The db storage is mounted in a local volume which is shared with the container, 
 ### adminer
 Adminer is a database managment software: https://www.adminer.org/ we can use it to send query to the database by a web interface.
 It will listen on the port `8083`.
+
+### backup
+It is possible to set up a backup using git: https://docs.requarks.io/storage/git
 
 ## wiki.js
 `Wiki.js` is an open source wiki software: https://js.wiki/
