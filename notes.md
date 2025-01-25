@@ -2,10 +2,10 @@
 title: Notes
 description: 
 published: true
-date: 2025-01-23T19:05:32.395Z
+date: 2025-01-25T08:10:47.191Z
 tags: notes
 editor: markdown
-dateCreated: 2025-01-23T19:05:30.438Z
+dateCreated: 2025-01-22T21:49:35.207Z
 ---
 
 # iliad technical test
@@ -47,3 +47,9 @@ Your solution will be evaluated based on the following criteria:
 The aim of this test is not only to assess your technical skills but also to give you the opportunity to express yourself freely. We want to see how you approach a real project, organize your work, and solve problems.
 
 Good luck and do your best! *(thanks)*
+
+> [features](/notes/features)
+{.is-info}
+
+[symfony_configuration](/notes/symfony_configuration)
+[Wiki_configuration](/notes/Wiki_configuration)
