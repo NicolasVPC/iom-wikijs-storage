@@ -2,7 +2,7 @@
 title: Symfony configuration
 description: 
 published: true
-date: 2025-01-25T00:20:19.874Z
+date: 2025-01-25T08:22:18.148Z
 tags: config, docker, notes, symfony
 editor: markdown
 dateCreated: 2025-01-24T18:37:41.173Z
