@@ -2,13 +2,14 @@
 title: Symfony configuration
 description: 
 published: true
-date: 2025-01-25T10:25:40.508Z
+date: 2025-01-25T10:35:43.381Z
 tags: config, docker, notes, symfony
 editor: markdown
 dateCreated: 2025-01-24T18:37:41.173Z
 ---
 
 # Set up a symfony project in Docker
+## Installing & Setting up the Symfony Framework
 src: https://symfony.com/doc/current/setup/docker.html
 According to the guidelines of symfony documentation there are two supported ways to run symfony projects through docker:
 - The Complete Docker Environment; it's an environment where PHP, web server, database, etc. are all in docker. https://github.com/dunglas/symfony-docker 
@@ -48,5 +49,14 @@ Install PDO drivers (mandatory for `Doctrine`).
  
 `sudo apt install php-mbstring php-intl php8.3-mysql`
 
----
+### create the project
+``` bash
+# run this if you are building a traditional web application
+symfony new my_project_directory --version="7.2.x" --webapp
 
+# run this if you are building a microservice, console application or API
+symfony new my_project_directory --version="7.2.x"
+```
+
+In this case Iliad Order Manager is an API, so: `symfony new my_project_directory --version="7.2.2"`
+version `7.2` end of support: July 2025 (https://symfony.com/releases/7.2)
