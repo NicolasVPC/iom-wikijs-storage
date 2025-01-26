@@ -2,7 +2,7 @@
 title: Symfony routing
 description: 
 published: true
-date: 2025-01-26T09:27:17.882Z
+date: 2025-01-26T09:27:48.513Z
 tags: config, routing, symfony
 editor: markdown
 dateCreated: 2025-01-26T09:23:47.254Z
@@ -46,15 +46,15 @@ kernel:
     resource: App\Kernel
     type: attribute
 ```
-- Create a `/config/routes/routes.yaml` file:
+- Create a `config/routes/routes.yaml` file:
 ``` yaml
 # config/routes.yaml
 blog_list:
     path: /foo/bar
     # the controller value has the format 'controller_class::method_name'
-    controller: App\Controller\FooController::number
+    controller: App\Controller\FooController::bar
 
     # if the action is implemented as the __invoke() method of the
     # controller class, you can skip the '::method_name' part:
-    # controller: App\Controller\BlogController
+    # controller: App\Controller\FooController
 ```
