@@ -2,7 +2,7 @@
 title: Database test
 description: 
 published: true
-date: 2025-01-26T11:01:53.546Z
+date: 2025-01-26T11:02:49.465Z
 tags: db, docker, notes, test
 editor: markdown
 dateCreated: 2025-01-26T10:57:51.993Z
@@ -91,3 +91,6 @@ networks:
 ```
 
 as you can see `development` is the common network.
+
+> **Note:** all the services inside the same `docker-compose.yaml` file share a default common network. This is why we don't need to specify the networks for all the services.
+{.is-info}
