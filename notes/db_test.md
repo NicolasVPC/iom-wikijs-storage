@@ -2,8 +2,8 @@
 title: Database test
 description: 
 published: true
-date: 2025-01-26T10:57:51.993Z
-tags: docker, notes, db, test
+date: 2025-01-26T10:59:26.540Z
+tags: db, docker, notes, test
 editor: markdown
 dateCreated: 2025-01-26T10:57:51.993Z
 ---
@@ -19,7 +19,6 @@ services:
       - db.env
     # environment:
       # MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  # Set in .env
-      # MYSQL_DATABASE: ${MYSQL_DATABASE}            # Set in .env
       # MYSQL_USER: ${MYSQL_USER}                    # Set in .env
       # MYSQL_PASSWORD: ${MYSQL_PASSWORD}            # Set in .env
     volumes:
