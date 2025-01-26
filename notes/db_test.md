@@ -2,7 +2,7 @@
 title: Database test
 description: 
 published: true
-date: 2025-01-26T11:02:49.465Z
+date: 2025-01-26T11:04:06.865Z
 tags: db, docker, notes, test
 editor: markdown
 dateCreated: 2025-01-26T10:57:51.993Z
@@ -94,3 +94,6 @@ as you can see `development` is the common network.
 
 > **Note:** all the services inside the same `docker-compose.yaml` file share a default common network. This is why we don't need to specify the networks for all the services.
 {.is-info}
+
+## scripts
+The sql scripts are inside `database/scripts/`, they are automatically loaded at the start of the containers, thanks to the volume `./data:/var/lib/mysql`.
