@@ -2,7 +2,7 @@
 title: Symfony routing
 description: 
 published: true
-date: 2025-01-26T09:27:48.513Z
+date: 2025-01-26T09:28:44.202Z
 tags: config, routing, symfony
 editor: markdown
 dateCreated: 2025-01-26T09:23:47.254Z
@@ -58,3 +58,4 @@ blog_list:
     # controller class, you can skip the '::method_name' part:
     # controller: App\Controller\FooController
 ```
+
