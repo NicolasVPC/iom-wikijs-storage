@@ -2,7 +2,7 @@
 title: Doctrine
 description: 
 published: true
-date: 2025-01-28T00:27:34.857Z
+date: 2025-01-28T00:27:43.048Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-27T18:04:14.422Z
@@ -12,3 +12,4 @@ dateCreated: 2025-01-27T18:04:14.422Z
 https://symfony.com/doc/current/doctrine.html
 https://symfony.com/doc/6.4/the-fast-track/en/8-doctrine.html
 https://symfonycasts.com/screencast/symfony-doctrine/docker-compose
+vedi also documentazione locale
