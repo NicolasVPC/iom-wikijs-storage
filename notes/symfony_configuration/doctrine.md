@@ -2,7 +2,7 @@
 title: Doctrine
 description: 
 published: true
-date: 2025-01-28T09:12:24.885Z
+date: 2025-01-28T09:12:47.797Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-27T18:04:14.422Z
@@ -20,7 +20,7 @@ composer require symfony/orm-pack
 composer require --dev symfony/maker-bundle
 ```
 inside the `.env` file in `app/` you have to set up the `DATABASE_URL` env variable, we will use mysql:
-``` properties
+``` env
 MYSQL_ROOT_PASSWORD=securepassword
 MYSQL_USER=tester
 MYSQL_PASSWORD=securepassword
