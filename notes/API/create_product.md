@@ -2,7 +2,7 @@
 title: Create product API
 description: 
 published: true
-date: 2025-01-28T17:29:24.872Z
+date: 2025-01-28T17:29:40.639Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
@@ -13,4 +13,4 @@ dateCreated: 2025-01-28T16:12:00.646Z
 {.is-info}
 
 we can use `php bin/console make:controller ProductController` to create a ProductController class.
-To generate PHP Unit tests we need the following package: `composer require --dev symfony/test-pack`
+To generate automatically PHP Unit tests template we need the following package: `composer require --dev symfony/test-pack`
