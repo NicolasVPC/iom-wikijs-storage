@@ -2,7 +2,7 @@
 title: Doctrine
 description: 
 published: true
-date: 2025-01-28T09:37:50.304Z
+date: 2025-01-28T10:22:52.569Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-27T18:04:14.422Z
@@ -111,7 +111,7 @@ MYSQL_ROOT_PASSWORD=securepassword
 MYSQL_USER=tester
 MYSQL_PASSWORD=securepassword
 MYSQL_DATABASE=app
-DATABASE_URL=mysql://${MYSQL_USER:-tester}:${MYSQL_PASSWORD:-pS5fqZ8pUN3yrAs}@database:3306/${MYSQL_DATABASE:-app}?serverVersion=${MYSQL_VERSION:-8.4}&charset=${MYSQL_CHARSET:-utf8mb4}
+DATABASE_URL=mysql://root:${MYSQL_ROOT_PASSWORD:-securepassword}@127.0.0.1:8088/${MYSQL_DATABASE:-app}?serverVersion=${MYSQL_VERSION:-8.4}&charset=${MYSQL_CHARSET:-utf8mb4}
 ```
 
 # Set up Mysql
