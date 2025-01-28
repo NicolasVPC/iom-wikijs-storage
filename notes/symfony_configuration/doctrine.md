@@ -2,44 +2,25 @@
 title: Doctrine
 description: 
 published: true
-date: 2025-01-28T09:17:24.552Z
+date: 2025-01-28T09:31:37.282Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-27T18:04:14.422Z
 ---
 
-# First steps with Doctrine
-https://symfony.com/doc/current/doctrine.html
-https://symfony.com/doc/6.4/the-fast-track/en/8-doctrine.html
-https://symfonycasts.com/screencast/symfony-doctrine/docker-compose
-vedi also documentazione locale
-
-The `orm` Symfony pack is needed in order to configure Doctrine and create the db:
-``` shell
-composer require symfony/orm-pack
-composer require --dev symfony/maker-bundle
-```
-inside the `.env` file in `app/` you have to set up the `DATABASE_URL` env variable, we will use mysql:
-``` env
-# app/.env
-MYSQL_ROOT_PASSWORD=securepassword
-MYSQL_USER=tester
-MYSQL_PASSWORD=securepassword
-MYSQL_DATABASE=app
-DATABASE_URL=mysql://${MYSQL_USER:-tester}:${MYSQL_PASSWORD:-pS5fqZ8pUN3yrAs}@database:3306/${MYSQL_DATABASE:-app}?serverVersion=${MYSQL_VERSION:-8.4}&charset=${MYSQL_CHARSET:-utf8mb4}
-```
-
-Installing the `orm` package will modify the `app/compose.yaml` file by adding an already configured postgres database as a Docker service. It will also modify `app/compose.override.yaml` adding a default port database.
-
-# Using MySQL
+**here te official guide step by step:**
+# Using MySQL (official guide)
 
 The Docker configuration of this repository is extensible thanks to Flex recipes. By default, the recipe installs PostgreSQL.
 If you prefer to work with MySQL, follow these steps:
 
 First, install the `symfony/orm-pack` package as described: `docker compose exec php composer req symfony/orm-pack`
 
+> In order to have the `app/compose.yaml` default database automatically added by the orm script in the local machine we can run this command locally: `php composer req symfony/orm-pack`.
+{.is-info}
+
 ## Docker Configuration
-Change the database image to use MySQL instead of PostgreSQL in `compose.yaml`:
+Change the database image to use MySQL instead of PostgreSQL in `app/compose.yaml`:
 
 ```diff
 ###> doctrine/doctrine-bundle ###
@@ -74,7 +55,7 @@ Depending on the database configuration, modify the environment in the same file
 DATABASE_URL: mysql://${MYSQL_USER:-app}:${MYSQL_PASSWORD:-!ChangeMe!}@database:3306/${MYSQL_DATABASE:-app}?serverVersion=${MYSQL_VERSION:-8}&charset=${MYSQL_CHARSET:-utf8mb4}
 ```
 
-Since we changed the port, we also have to define this in the `compose.override.yaml`:
+Since we changed the port, we also have to define this in the `app/compose.override.yaml`:
 ```diff
 ###> doctrine/doctrine-bundle ###
   database:
@@ -114,3 +95,41 @@ Test your setup:
 ```shell
 docker compose exec php bin/console dbal:run-sql -q "SELECT 1" && echo "OK" || echo "Connection is not working"
 ```
+
+---
+
+https://symfony.com/doc/current/doctrine.html
+https://symfony.com/doc/6.4/the-fast-track/en/8-doctrine.html
+https://symfonycasts.com/screencast/symfony-doctrine/docker-compose
+vedi also documentazione locale
+
+
+inside the `.env` file in `app/` you have to set up the database env variable that will be used by the symfony application:
+``` env
+# app/.env
+MYSQL_ROOT_PASSWORD=securepassword
+MYSQL_USER=tester
+MYSQL_PASSWORD=securepassword
+MYSQL_DATABASE=app
+DATABASE_URL=mysql://${MYSQL_USER:-tester}:${MYSQL_PASSWORD:-pS5fqZ8pUN3yrAs}@database:3306/${MYSQL_DATABASE:-app}?serverVersion=${MYSQL_VERSION:-8.4}&charset=${MYSQL_CHARSET:-utf8mb4}
+```
+
+# Set up Mysql
+We already defined the Mysql variables needed inside `.env` but those are used by the Symfony app. So we created the following `db.env` file to link them to the docker service:
+```
+.
+└── app/
+    └── db/
+        ├── data/
+        └── db.env
+```
+we also created a data folder to store the database.
+`db.env` looks like this:
+``` env
+MYSQL_ROOT_PASSWORD=securepassword
+MYSQL_USER=tester
+MYSQL_PASSWORD=securepassword
+MYSQL_DATABASE=app
+```
+
+Inside the `app/compose.yaml` file we modified the 
