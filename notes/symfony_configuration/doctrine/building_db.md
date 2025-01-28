@@ -2,7 +2,7 @@
 title: Bulding up the database
 description: 
 published: true
-date: 2025-01-28T17:08:13.649Z
+date: 2025-01-28T17:08:20.721Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-28T10:09:07.176Z
@@ -20,4 +20,3 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJiYWNrZ3JvdW5kOiB0
 ## Create entity with Doctrine
 To create an entity just run `php bin/console make:entity`, we'll set the entities for `product` and `order`. Following the instruction we'll first of all create the base properties following the diagram above.
 To create the ManyToMany relation between `product` and `order` we can follow the official guide here: https://symfony.com/doc/current/doctrine/associations.html
-
