@@ -2,7 +2,7 @@
 title: Doctrine
 description: 
 published: true
-date: 2025-01-28T09:07:37.971Z
+date: 2025-01-28T09:07:43.822Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-27T18:04:14.422Z
@@ -15,7 +15,7 @@ https://symfonycasts.com/screencast/symfony-doctrine/docker-compose
 vedi also documentazione locale
 
 The `orm` Symfony pack is needed in order to configure Doctrine and create the db:
-``` bash
+``` php
 composer require symfony/orm-pack
 composer require --dev symfony/maker-bundle
 ```
