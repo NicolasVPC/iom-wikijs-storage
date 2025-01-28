@@ -2,7 +2,7 @@
 title: Create product API
 description: 
 published: true
-date: 2025-01-28T20:26:54.887Z
+date: 2025-01-28T22:58:34.716Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
