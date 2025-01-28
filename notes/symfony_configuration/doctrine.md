@@ -2,7 +2,7 @@
 title: Doctrine
 description: 
 published: true
-date: 2025-01-28T09:31:37.282Z
+date: 2025-01-28T09:34:44.790Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-27T18:04:14.422Z
@@ -132,4 +132,27 @@ MYSQL_PASSWORD=securepassword
 MYSQL_DATABASE=app
 ```
 
-Inside the `app/compose.yaml` file we modified the 
+Inside the `app/compose.yaml` file we modified the docker service as following:
+``` diff
+###> doctrine/doctrine-bundle ###
+	database:
+-   image: mysql:${MYSQL_VERSION:-8}
++		image: mysql:${MYSQL_VERSION:-8.4}
+-   environment:
+-     MYSQL_DATABASE: ${MYSQL_DATABASE:-app}
+-     # You should definitely change the password in production
+-     MYSQL_RANDOM_ROOT_PASSWORD: "true"
+-     MYSQL_PASSWORD: ${MYSQL_PASSWORD:-!ChangeMe!}
+-     MYSQL_USER: ${MYSQL_USER:-app}
++		env_file:
++			- ./db/db.env
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+    volumes:
+-			- database_data:/var/lib/mysql:rw
++			- ./db/data:/var/lib/mysql:rw
+###< doctrine/doctrine-bundle ###
+```
