@@ -2,7 +2,7 @@
 title: Bulding up the database
 description: 
 published: true
-date: 2025-01-28T16:32:29.246Z
+date: 2025-01-28T16:32:40.169Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-28T10:09:07.176Z
@@ -21,4 +21,4 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJiYWNrZ3JvdW5kOiB0
 
 
 ## Create entity with Doctrine
-To create an entity just run `php bin/console make:entity`, we'll set the entities for `product` and `order'.
+To create an entity just run `php bin/console make:entity`, we'll set the entities for `product` and `order`.
