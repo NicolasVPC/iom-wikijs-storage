@@ -2,7 +2,7 @@
 title: Doctrine
 description: 
 published: true
-date: 2025-01-28T10:22:52.569Z
+date: 2025-01-28T10:23:32.834Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-27T18:04:14.422Z
@@ -61,7 +61,7 @@ Since we changed the port, we also have to define this in the `app/compose.overr
   database:
     ports:
 -     - "5432"
-+     - "3306"
++     - "8088:3306"
 ###< doctrine/doctrine-bundle ###
 ```
 
