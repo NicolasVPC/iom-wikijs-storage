@@ -2,14 +2,14 @@
 title: Create product API
 description: 
 published: true
-date: 2025-01-28T16:13:57.047Z
+date: 2025-01-28T17:11:12.967Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
 ---
 
-# Product entity
+# Create the controller
 > `symfony/maker-bundle` is required, we installed it using: `composer require symfony/maker-bundle --dev`
 {.is-info}
 
-## Entity diagram
+we can use `php bin/console make:controller ProductController` to create a ProductController class
