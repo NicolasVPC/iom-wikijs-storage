@@ -2,7 +2,7 @@
 title: Doctrine
 description: 
 published: true
-date: 2025-01-28T09:35:43.227Z
+date: 2025-01-28T09:37:50.304Z
 tags: db, doctrine, notes
 editor: markdown
 dateCreated: 2025-01-27T18:04:14.422Z
@@ -156,3 +156,6 @@ Inside the `app/compose.yaml` file we modified the docker service as following:
 +			- ./db/data:/var/lib/mysql:rw
 ###< doctrine/doctrine-bundle ###
 ```
+
+> `Mysql 8.4` is the current LTS version, **END OF SUPPORT:** 30 Apr 2032
+{.is-info}
