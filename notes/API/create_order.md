@@ -2,14 +2,14 @@
 title: Create order API
 description: 
 published: true
-date: 2025-01-29T14:46:46.870Z
+date: 2025-01-29T14:47:05.223Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
 ---
 
 # how to use the API
-To add an order to the system, make a POST request to `/create/order` with a json file with the following parameters:
+To add an order to the system, make a `POST` request to `/create/order` with a json file with the following parameters:
 - name: string - **required**
 - description: string - **optional**
 - date: Date - **required**
