@@ -2,7 +2,7 @@
 title: Order API
 description: 
 published: true
-date: 2025-01-29T17:46:56.659Z
+date: 2025-01-29T17:52:14.557Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
@@ -36,7 +36,7 @@ To update an order make a `PUT` request to `/update/order` sending a json file w
 - date: Date - **optional**
 - products: array[int(product id), int(quantity)] - **optional**
 
-
+the API will update the entry with the specified `id` inside the `order` table and the products associated in `order_product`. This will result in an increase of the stock equal to the different between the previous amount and the new amount.
 
 # API use cases
 ```diagram
