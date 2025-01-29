@@ -2,7 +2,7 @@
 title: Create product API
 description: 
 published: true
-date: 2025-01-29T00:24:34.821Z
+date: 2025-01-29T00:24:43.539Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T22:50:39.179Z
@@ -84,7 +84,7 @@ To add an order to the system, make a POST request to `/create/order` with a jso
 - name: string - **required**
 - description: string - **optional**
 - date: Date - **required**
-- products: array of int - **optional**
+- products: array of int - **required**
 
 ``` php
     public function testCreateOrder(): void
