@@ -2,7 +2,7 @@
 title: Symfony configuration
 description: 
 published: true
-date: 2025-01-29T14:26:45.370Z
+date: 2025-01-29T14:28:01.419Z
 tags: config, docker, notes, symfony
 editor: markdown
 dateCreated: 2025-01-24T18:37:41.173Z
@@ -61,7 +61,7 @@ symfony new my_project_directory --version="7.2.x"
 In this case Iliad Order Manager is an API, so: `symfony new api --version="7.2.2"`
 version `7.2` end of support: July 2025 (https://symfony.com/releases/7.2)
 
-running `cd api` then `symfony server:start` will run the server, and it will shou up the symfony default homepage.
+running `cd api` then `symfony server:start` will run the server, and it will show up the symfony default homepage.
 
 ## dockerize the project
 It's also possible to use Symfony Docker with existing projects!
