@@ -2,7 +2,7 @@
 title: Order API
 description: 
 published: true
-date: 2025-01-29T17:39:29.741Z
+date: 2025-01-29T17:44:16.769Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
@@ -26,8 +26,7 @@ The product stock will decrease of the amount specified in the `quantity` field 
 To delete an order make a `DELETE` request to `/delete/order/` with a json file with the following parameters:
 - order_id: int - **required**
 
-the API will delete the entry with the specified id inside the `order` table and its counterpart entry inside `order_product` table.
-
+the API will delete the entry with the specified `id` inside the `order` table and its counterpart entry inside `order_product` table. This will result in an increase of the stock inside the `product` table of the same amount present inside `order_product` table.
 
 # API use cases
 ```diagram
