@@ -2,7 +2,7 @@
 title: Wiki.js configuration
 description: 
 published: true
-date: 2025-01-28T18:22:36.215Z
+date: 2025-01-29T14:25:54.068Z
 tags: config, notes, wikijs
 editor: markdown
 dateCreated: 2025-01-24T08:40:28.849Z
@@ -90,5 +90,3 @@ services:
       - 8084:3000
 
 ```
-
-
