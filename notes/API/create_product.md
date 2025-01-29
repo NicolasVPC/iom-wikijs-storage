@@ -2,7 +2,7 @@
 title: Create product API
 description: 
 published: true
-date: 2025-01-29T00:22:43.955Z
+date: 2025-01-29T00:24:34.821Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T22:50:39.179Z
@@ -81,7 +81,10 @@ final class OrderController extends AbstractController
 
 # how to use the API
 To add an order to the system, make a POST request to `/create/order` with a json file with the following parameters:
--  
+- name: string - **required**
+- description: string - **optional**
+- date: Date - **required**
+- products: array of int - **optional**
 
 ``` php
     public function testCreateOrder(): void
