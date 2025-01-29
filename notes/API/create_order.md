@@ -2,7 +2,7 @@
 title: Create order API
 description: 
 published: true
-date: 2025-01-29T14:43:10.662Z
+date: 2025-01-29T14:46:46.870Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
@@ -16,3 +16,6 @@ To add an order to the system, make a POST request to `/create/order` with a jso
 - products: array[int(product id), int(quantity)] - **required**
 
 the API will create an entry with the specified parameters inside the `order` table and an entry inside `order_product` table to link the order to the wanted products.
+
+> **Note:** The product table needs to be filled in with some specially entered data.
+{.is-info}
