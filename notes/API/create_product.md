@@ -2,7 +2,7 @@
 title: Create product API
 description: 
 published: true
-date: 2025-01-29T00:27:17.781Z
+date: 2025-01-29T00:27:44.538Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T22:50:39.179Z
@@ -87,32 +87,3 @@ To add an order to the system, make a POST request to `/create/order` with a jso
 - products: array of int - **required**
 
 the API will create an entry with the specified parameters inside the `order` table and an entry inside `order_product` table to link the order to the wanted products.
-
-# test
-``` php
-    public function testCreateOrder(): void
-    {
-        $client = static::createClient();
-    
-        $timestamp = 1738095557;
-        $formattedDate = (new \DateTime())->setTimestamp($timestamp)->format('Y-m-d');
-    
-        $client->request(
-            'POST',
-            '/create/order',
-            [],
-            [],
-            ['CONTENT_TYPE' => 'application/json'],
-            json_encode([
-                'name' => 'nome test',
-                'description' => 'description test',
-                'date' => $formattedDate,
-                'products' => [1,2,3,4],
-            ])
-        );
-    
-        self::assertResponseIsSuccessful();
-        self::assertSame(200, $client->getResponse()->getStatusCode());
-        self::assertJson($client->getResponse()->getContent());
-    }
-```
