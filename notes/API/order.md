@@ -2,7 +2,7 @@
 title: Order API
 description: 
 published: true
-date: 2025-01-29T17:28:40.282Z
+date: 2025-01-29T17:29:50.037Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
@@ -22,7 +22,7 @@ the API will create an entry with the specified parameters inside the `order` ta
 {.is-info}
 
 ## delete order
-
+To delete an order make a `DELETE` request to `/delete/order/
 
 # API use cases
 ```diagram
