@@ -2,7 +2,7 @@
 title: Create product API
 description: 
 published: true
-date: 2025-01-29T00:18:26.275Z
+date: 2025-01-29T00:22:43.955Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T22:50:39.179Z
@@ -80,3 +80,33 @@ final class OrderController extends AbstractController
 ```
 
 # how to use the API
+To add an order to the system, make a POST request to `/create/order` with a json file with the following parameters:
+-  
+
+``` php
+    public function testCreateOrder(): void
+    {
+        $client = static::createClient();
+    
+        $timestamp = 1738095557;
+        $formattedDate = (new \DateTime())->setTimestamp($timestamp)->format('Y-m-d');
+    
+        $client->request(
+            'POST',
+            '/create/order',
+            [],
+            [],
+            ['CONTENT_TYPE' => 'application/json'],
+            json_encode([
+                'name' => 'nome test',
+                'description' => 'description test',
+                'date' => $formattedDate,
+                'products' => [1,2,3,4],
+            ])
+        );
+    
+        self::assertResponseIsSuccessful();
+        self::assertSame(200, $client->getResponse()->getStatusCode());
+        self::assertJson($client->getResponse()->getContent());
+    }
+```
