@@ -2,7 +2,7 @@
 title: Create order API
 description: 
 published: true
-date: 2025-01-29T14:47:05.223Z
+date: 2025-01-29T16:04:55.477Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
@@ -19,3 +19,6 @@ the API will create an entry with the specified parameters inside the `order` ta
 
 > **Note:** The product table needs to be filled in with some specially entered data.
 {.is-info}
+
+---
+# API architecture
