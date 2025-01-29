@@ -1,8 +1,8 @@
 ---
-title: Create product API
+title: Create order API
 description: 
 published: true
-date: 2025-01-29T00:27:44.538Z
+date: 2025-01-29T00:28:28.912Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T22:50:39.179Z
