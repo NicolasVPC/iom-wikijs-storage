@@ -2,7 +2,7 @@
 title: Order API
 description: 
 published: true
-date: 2025-01-29T17:45:22.422Z
+date: 2025-01-29T17:46:56.659Z
 tags: api
 editor: markdown
 dateCreated: 2025-01-28T16:12:00.646Z
@@ -10,7 +10,7 @@ dateCreated: 2025-01-28T16:12:00.646Z
 
 # How to use the API
 ## create order
-To add an order to the system, make a `POST` request to `/create/order` with a json file with the following parameters:
+To add an order to the system, make a `POST` request to `/create/order` sending a json file with the following parameters:
 - name: string - **required**
 - description: string - **optional**
 - date: Date - **required**
@@ -29,7 +29,14 @@ To delete an order make a `DELETE` request to `/delete/order` sending a json fil
 the API will delete the entry with the specified `id` inside the `order` table and its counterpart entry inside `order_product` table. This will result in an increase of the stock inside the `product` table of the same amount present inside `order_product` table.
 
 ## update order
-To update an order make a `PUT` request to `/update/order` with a json file with 
+To update an order make a `PUT` request to `/update/order` sending a json file with the following parameters:
+- order_id: int - **required**
+- name: string - **optional**
+- description: string - **optional**
+- date: Date - **optional**
+- products: array[int(product id), int(quantity)] - **optional**
+
+
 
 # API use cases
 ```diagram
